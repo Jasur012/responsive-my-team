@@ -1,0 +1,127 @@
+.hero-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+          align-items: center;
+  margin: 0 165px;        
+}
+.hero-section::before {
+  position: absolute;
+  top: 250px;
+  left: calc(0% - 100px);
+  width: 200px;
+  height: 200px;
+  background-image: url(../images/left-design.svg);
+  background-repeat: no-repeat;
+  z-index: 1;
+  content: "";
+}
+.hero-section::after {
+  position: absolute;
+  top: 600px;
+  left: calc(100% - 565px);
+  background-position-y: 100px; 
+  width: 358px;
+  height: 200px;
+  background-image: url(../images/hero-buttomdesign.svg);
+  background-repeat: no-repeat;
+  z-index: 1;
+  content: "";
+}
+
+.hero__head {
+  max-width: 635px;
+  padding-right: 60px;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 100px;
+  color: #FFFFFF;
+}
+.hero__orange {
+  color: #F67
+}  
+.hero__line {
+  margin-left: 0;
+  margin-bottom: 79px;
+  padding-left: 0;
+  width: 50px;
+  height: 4px;
+  background-color: #79C8C7;;
+}
+.hero__info {
+  max-width: 445px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #FFFFFF;
+}
+@media only screen and (max-width: 1358px){
+  .hero-section {
+    margin: 0 100px; 
+  }
+}
+@media only screen and (max-width: 1180px) {
+  .hero-section::before {
+    display: none;
+  }
+  .hero-section {
+    margin: 0 40px; 
+  }
+
+}
+@media only screen and (max-width: 1110px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero__head {
+    padding: 0;
+    text-align: center;
+  }
+  .hero__line {
+    display: none;
+  }
+
+  .hero__info {
+    text-align: center;
+  }
+  .hero-section::after {  
+    position: absolute;
+    top: 600px;
+    left: calc(15% - -20%); 
+    // left: calc(100% - 565px);
+    background-position-y: 100px; 
+    width: 100%;
+    width: 358px;
+    height: 200px;
+    background-image: url(../images/hero-buttomdesign.svg);
+    background-repeat: no-repeat;
+    z-index: 1;
+    content: "";
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero-section::after {
+    // left: calc(15% - -12%); 
+    display: none;
+
+  }
+}
+@media only screen and (max-width: 630px) {
+  .hero__head {
+    font-size: 70px;
+    line-height: 70px;
+  }
+  .hero-section::after {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 475px) {
+  .hero__head {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
